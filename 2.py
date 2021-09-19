@@ -15,6 +15,7 @@ class Programm(QWidget):
         self.first_line.move(50, 100)
         self.second_line = QLineEdit(self)
         self.second_line.move(400, 100)
+        self.second_line.setDisabled(True)
         self.btn = QPushButton('->', self)
         self.btn.move(250, 100)
         self.btn.clicked.connect(self.button)
