@@ -43,7 +43,7 @@ class Programm(QWidget):
         for i in range(self.lng):
             if self.a[i] == send:
                 self.first_line.insert(str(self.abc.get(i)))
-                self.second_line.insert(str(self.d.get(i)))
+                self.second_line.insert(str(self.d.get(i)) + " ")
 
 
 if __name__ == '__main__':
