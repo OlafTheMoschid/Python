@@ -34,7 +34,7 @@ class Programm(QWidget):
         for i in range(self.lng):
             x = self.abc.get(i)
             self.a[i] = QPushButton(x, self)
-            self.a[i].resize(20, 20)
+            self.a[i].resize(20, 25)
             self.a[i].move(50 + i * 30, 50)
             self.a[i].clicked.connect(self.buttons)
 
