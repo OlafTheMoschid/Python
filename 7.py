@@ -26,6 +26,7 @@ class Programm(QWidget):
         password = home1.PasswordChecker()
         f = open('top 10000 passwd.txt', 'r')
         a = f.readlines()
+        f.close()
         s = {}
         for i in a:
             try:
