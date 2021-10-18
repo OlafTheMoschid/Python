@@ -21,7 +21,7 @@ class PasswordThreeError(PasswordError):
     pass
 
 
-class NumberError(BaseException):
+class NumberError(Exception):
     pass
 
 
