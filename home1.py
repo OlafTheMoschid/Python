@@ -26,13 +26,6 @@ class PasswordChecker():
     def __init__(self):
         pass
 
-    def main(self, p):
-        self.lenghtChecker(p)
-        self.lettersChecker(p)
-        self.digitsChecker(p)
-        self.threeChecker(p)
-        self.wordListChecker(p.lower())
-
     def lenghtChecker(self, p):
         if len(p) < 9:
             raise PasswordLenghtError(
@@ -79,6 +72,7 @@ class PasswordChecker():
                         "Password must not contain three continuous characters")
 
     def wordListChecker(self, p):
+        p.lower()
         wordsList = open('top-9999-words.txt', 'r')
         a = wordsList.readlines()
         wordsList.close()
