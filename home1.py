@@ -84,4 +84,5 @@ class PasswordChecker():
         wordsList.close()
         for i in a:
             if str(i[:-1]) in p:
-                raise PasswordWordsError("Password must not contain usual words")
+                raise PasswordWordsError(
+                    "Password must not contain usual words")
