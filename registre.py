@@ -1,7 +1,7 @@
 import re
 
 
-class PasswordError(BaseException):
+class PasswordError(Exception):
     pass
 
 
