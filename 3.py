@@ -37,6 +37,9 @@ class Programm(QMainWindow, Ui_MainWindow):
         except:
             self.label_5.setText("Wrong file name!")
             self.textEdit.setText("")
+            self.lineEdit.setText("")
+            self.lineEdit_2.setText("")
+            self.lineEdit_3.setText("")
 
 
 if __name__ == '__main__':
