@@ -10,7 +10,7 @@ class Programm(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.fname = "F:/rez.csv"
+        self.fname = "rez.csv"
         self.initUI()
         self.loadData()
         self.findWiner()
