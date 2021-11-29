@@ -1,5 +1,6 @@
 import re
 
+
 def fun(s):
     pattern = '\w+\-*\d*@[^\W_]+\.\w{,3}$'
     return True if re.fullmatch(pattern, s) else False
@@ -22,4 +23,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

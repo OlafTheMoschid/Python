@@ -1,6 +1,7 @@
 import pytest
 from rectangle import Rectangle
 
+
 @pytest.fixture
 def rectangle():
     return Rectangle(5, 10)

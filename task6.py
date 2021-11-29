@@ -20,6 +20,7 @@ graph.addEdge('Яшкино', 'Томск', 146)
 graph.addEdge('Юрга', 'Томск', 106)
 graph.addEdge('Томск', 'Кемерово', 216)
 
+
 def func(start, end):
     dist, path = graph.dijkstra(start)
     path.append(end)
@@ -28,42 +29,42 @@ def func(start, end):
         if key == end:
             v = value
             break
-    
+
     if v != 10 ** 6:
         print('Минимальный путь от города', start, 'до города',
-            end, '=', value, 'км\nПолученный путь: ')
+              end, '=', value, 'км\nПолученный путь: ')
         print(*path, sep=' -> ')
         return value
     else:
         print('Пути не существует')
         return None
-    
+
 
 def test_no_entry_city():
     start = 'Анжеро-Судженск'
     end = 'Мариинск'
     assert func(start, end) == None
-    
+
+
 def test_no_wayout_city():
     start = 'Кемерово'
     end = 'Мариинск'
     assert func(start, end) == None
-    
+
+
 def test_no_path_city():
     start = 'Яшкино'
     end = 'Яя'
     assert func(start, end) == None
-    
+
+
 def test_single_city():
     start = 'Яшкино'
     end = 'Яшкино'
     assert func(start, end) == 0
 
+
 def test_usual_path():
     start = 'Яшкино'
     end = 'Кемерово'
     assert func(start, end) == 140
-
-
-
-
