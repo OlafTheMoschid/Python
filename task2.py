@@ -1,12 +1,14 @@
 from PyQt5.QtWidgets import QApplication, QWidget, QListWidget, QVBoxLayout, QListWidgetItem, QLabel, QListView
 import sys
 
+
 class ListWidget1(QListWidget):
     def dropEvent(self, e):
         temp = e.source().currentItem()
         self.addItem(temp.text())
-        e.source().takeItem(e.source().row(e.source().currentItem()))   
-    
+        e.source().takeItem(e.source().row(e.source().currentItem()))
+
+
 class ListWidget(QListWidget):
     def dragEnterEvent(self, e):
         if e.source() != self and self.count() < 4:
@@ -18,6 +20,7 @@ class ListWidget(QListWidget):
         temp = e.source().currentItem()
         self.addItem(temp.text())
         e.source().takeItem(e.source().row(e.source().currentItem()))
+
 
 class Window(QWidget):
     def __init__(self):
@@ -40,7 +43,7 @@ class Window(QWidget):
 
         self.appLayout = QVBoxLayout()
         self.appLayout.setSpacing(10)
-        
+
         self.appLayout.addWidget(self.myListWidget1)
         self.appLayout.addWidget(self.myListWidget2)
 
@@ -58,10 +61,10 @@ class Window(QWidget):
         self.myListWidget1.insertItem(5, listWidgetItem5)
         self.myListWidget1.insertItem(6, listWidgetItem6)
         self.myListWidget1.insertItem(7, listWidgetItem7)
-        
+
         if self.myListWidget2.count() > 4:
             self.myListWidget2.setAcceptDrops(False)
-        
+
         self.setLayout(self.appLayout)
         self.show()
 
