@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div>{{ message }}</div>
+{% for item in videos%}
+    <table>
+        <tr>
+            <a class="button button1" href="/{{item.name}}">Watch</a>
+            <td>{{item.name}}</td>
+            <td>{{item.author}}</td>
+            <td>{{item.upload_date}}</td>
+            
+        </tr>
+    </table>
+{% endfor %}
+{% endblock %}
